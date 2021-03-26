@@ -53,7 +53,8 @@ def main():
         print(("Check sum       : %s" % (checksum_string)))
         print("")
 
-        if fh.is_dirty():
+        # Not needed for my use
+        '''if fh.is_dirty():
             chunk_count = sum([1 for c in fh.chunks() if c.verify()])
 
             last_chunk = None
@@ -108,7 +109,7 @@ def main():
                    chunk.log_last_record_number(),
                    header_checksum_string,
                    data_checksum_string))
-
+        '''
 
 if __name__ == "__main__":
     main()
